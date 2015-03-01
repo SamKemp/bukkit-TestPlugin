@@ -5,8 +5,8 @@
     website: http://modding.untamemadman.pw
     commands:
       untamemadman:
-         description: Shows information about me.
-         usage: /untamemadman
+         description: The main command for the plugin.
+         usage: /untamemadman <info/fire>
       untame:
-         description: Shows information about me.
-         usage: /untame
+         description: The main command for the plugin.
+         usage: /untame <info/fire>

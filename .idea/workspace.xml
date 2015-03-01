@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ae9e96b-1ab6-401e-814f-5747c38b6e27" name="Default" comment="">
-      <change type="DELETED" beforePath="M:\untamemadman\Bukkit Plugins\bukkit-TestPlugin\target\Untame-TestPlugin-1.0.jar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pw/untamemadman/plugins/testplugin/TestPlugin.class" afterPath="$PROJECT_DIR$/target/classes/pw/untamemadman/plugins/testplugin/TestPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pw/untamemadman/plugins/testplugin/listeners/onLogin.class" afterPath="$PROJECT_DIR$/target/classes/pw/untamemadman/plugins/testplugin/listeners/onLogin.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pw/untamemadman/plugins/testplugin/TestPlugin.java" afterPath="$PROJECT_DIR$/src/main/java/pw/untamemadman/plugins/testplugin/TestPlugin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pw/untamemadman/plugins/testplugin/listeners/onLogin.java" afterPath="$PROJECT_DIR$/src/main/java/pw/untamemadman/plugins/testplugin/listeners/onLogin.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/plugin.yml" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bukkit-TestPlugin.iws" />
@@ -45,8 +41,8 @@
       <file leaf-file-name="TestPlugin.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pw/untamemadman/plugins/testplugin/TestPlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51307845" vertical-offset="272" max-vertical-offset="2210">
-              <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+            <state vertical-scroll-proportion="4.6012397" vertical-offset="0" max-vertical-offset="2618">
+              <caret line="137" column="13" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -475,7 +471,13 @@
       <option name="project" value="LOCAL" />
       <updated>1425215900400</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Command with no args doesn't work">
+      <created>1425233215365</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1425233215365</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -524,7 +526,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Added a command" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a command" />
+    <MESSAGE value="Command with no args doesn't work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Command with no args doesn't work" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -575,14 +578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pw/untamemadman/plugins/testplugin/listeners/onLogin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.51307845" vertical-offset="0" max-vertical-offset="497">
@@ -602,10 +597,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pw/untamemadman/plugins/testplugin/TestPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51307845" vertical-offset="272" max-vertical-offset="2210">
-          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+        <state vertical-scroll-proportion="4.6012397" vertical-offset="0" max-vertical-offset="2618">
+          <caret line="137" column="13" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
           <folding />
         </state>
       </provider>
