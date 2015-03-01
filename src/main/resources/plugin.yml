@@ -3,11 +3,7 @@
     version: 1.0
     author: untamemadman
     website: http://modding.untamemadman.pw
-
-
-commands:
-   untamemadman:
-      description: This is a command
-      usage: /untamemadman
-      permission: Untame-TestPlugin.basic
-      permission-message: You dont have <permission>
+    commands:
+      untamemadman:
+         description: Shows information about me.
+         usage: /untamemadman
