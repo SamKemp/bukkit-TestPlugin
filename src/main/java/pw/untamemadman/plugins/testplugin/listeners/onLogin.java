@@ -14,7 +14,6 @@ public class onLogin implements Listener
     @EventHandler
     public void onLogin(PlayerLoginEvent event)
     {
-
         Bukkit.broadcastMessage("A player just joined!");
     }
 }

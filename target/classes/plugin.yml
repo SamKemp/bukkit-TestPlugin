@@ -1,9 +1,12 @@
     name: Untame-TestPlugin
     main: pw.untamemadman.plugins.testplugin.TestPlugin
-    version: 1.0
+    version: 1.1
     author: untamemadman
     website: http://modding.untamemadman.pw
     commands:
       untamemadman:
          description: Shows information about me.
          usage: /untamemadman
+      untame:
+         description: Shows information about me.
+         usage: /untame
