@@ -6,7 +6,6 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
-import pw.untamemadman.plugins.testplugin.listeners.onLogin;
 
 /**
  * Created by untamemadman on 28/02/2015.
@@ -22,67 +21,89 @@ public class TestPlugin extends JavaPlugin
     }
 
     @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
-    {
-        if (cmd.getName().equalsIgnoreCase("untamemadman"))
-        // If the player typed /untamemadman then do the following...
+        public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
         {
-            if(args.length == 0)
+            if (cmd.getName().equalsIgnoreCase("untamemadman"))
+            // If the player typed /untamemadman then do the following...
             {
-                Player player = (Player) sender;
-                sender.sendMessage("Use arguments");
-                return false;
-            }
-            else if(args[0].equalsIgnoreCase("info"))
-            {
-                if (sender instanceof Player) {
+                if(args.length == 0)
+                {
                     Player player = (Player) sender;
-                    sender.sendMessage("Thanks for using my plugin!");
-                    sender.sendMessage("This is version " + ChatColor.GREEN + "1.1");
-                    sender.sendMessage("for more information go to my website");
-                    sender.sendMessage(ChatColor.BLUE + "http://plugins.untamemadman.pw");
-                    sender.sendMessage(ChatColor.BLUE + "http://modding.untamemadman.pw");
-                    sender.sendMessage("View my blog here");
-                    sender.sendMessage(ChatColor.BLUE + "http://blog.untamemadman.pw");
-                    sender.sendMessage("How about supporting me?");
-                    sender.sendMessage(ChatColor.BLUE + "http://patreon.untamemadman.pw");
-                    return true;
-                } else
-                {
-                    getLogger().info("'untamemadman' has been run from console.");
-                    getLogger().info("ALL players will see the message.");
-                    Bukkit.broadcastMessage("Thanks for using my plugin!");
-                    Bukkit.broadcastMessage("This is version " + ChatColor.GREEN + "1.1");
-                    Bukkit.broadcastMessage("for more information go to my website");
-                    Bukkit.broadcastMessage(ChatColor.BLUE + "http://plugins.untamemadman.pw");
-                    Bukkit.broadcastMessage(ChatColor.BLUE + "http://modding.untamemadman.pw");
-                    Bukkit.broadcastMessage("View my blog here");
-                    Bukkit.broadcastMessage(ChatColor.BLUE + "http://blog.untamemadman.pw");
-                    Bukkit.broadcastMessage("How about supporting me?");
-                    Bukkit.broadcastMessage(ChatColor.BLUE + "http://patreon.untamemadman.pw");
-                    return true;
+                    sender.sendMessage("Use arguments");
+                    return false;
                 }
-            }
-            else if(args[0].equalsIgnoreCase("fire"))
-            {
-                if (sender instanceof Player)
+                else if(args[0].equalsIgnoreCase("info"))
                 {
-                    ((Player) sender).setFireTicks(2400); //2400 = 120 seconds = 2 mins
-                    return true;
+                    if (sender instanceof Player) {
+                        Player player = (Player) sender;
+                        sender.sendMessage("Thanks for using my plugin!");
+                        sender.sendMessage("This is version " + ChatColor.GREEN + "2.0");
+                        sender.sendMessage("for more information go to my website");
+                        sender.sendMessage(ChatColor.BLUE + "http://plugins.untamemadman.pw");
+                        sender.sendMessage(ChatColor.BLUE + "http://modding.untamemadman.pw");
+                        sender.sendMessage("View my blog here");
+                        sender.sendMessage(ChatColor.BLUE + "http://blog.untamemadman.pw");
+                        sender.sendMessage("How about supporting me?");
+                        sender.sendMessage(ChatColor.BLUE + "http://patreon.untamemadman.pw");
+                        return true;
+                    } else
+                    {
+                        getLogger().info("'untamemadman' has been run from console.");
+                        getLogger().info("ALL players will see the message.");
+                        Bukkit.broadcastMessage("Thanks for using my plugin!");
+                        Bukkit.broadcastMessage("This is version " + ChatColor.GREEN + "2.0");
+                        Bukkit.broadcastMessage("for more information go to my website");
+                        Bukkit.broadcastMessage(ChatColor.BLUE + "http://plugins.untamemadman.pw");
+                        Bukkit.broadcastMessage(ChatColor.BLUE + "http://modding.untamemadman.pw");
+                        Bukkit.broadcastMessage("View my blog here");
+                        Bukkit.broadcastMessage(ChatColor.BLUE + "http://blog.untamemadman.pw");
+                        Bukkit.broadcastMessage("How about supporting me?");
+                        Bukkit.broadcastMessage(ChatColor.BLUE + "http://patreon.untamemadman.pw");
+                        return true;
+                    }
+                }
+                else if(args[0].equalsIgnoreCase("fire"))
+                {
+                    if (sender instanceof Player)
+                    {
+                        if (args[1].length() == 0)
+                        {
+                            ((Player) sender).setFireTicks(2400); //2400 = 120 seconds = 2 mins
+                            return true;
+                        }
+                        else if (args[1].length() != 0)
+                        {
+                            Player target = Bukkit.getServer().getPlayer(args[1]);
+                            if (target == null)
+                            {
+                                sender.sendMessage(ChatColor.DARK_RED + args[1] + " is not currently online.");
+                                return true;
+                            }
+                            if (args[2].length() != 0)
+                            {
+                                target.setFireTicks(Integer.parseInt(args[2]));
+                                return true;
+                            }
+                            else {
+                                target.setFireTicks(2400);
+                                return true;
+                            }
+
+                        }
+                    } else
+                    {
+                        sender.sendMessage("You must be a player");
+                        return false;
+                    }
+
                 }
                 else
                 {
-                    sender.sendMessage("You must be a player");
+                    Player player = (Player) sender;
+                    sender.sendMessage("Use arguments");
                     return false;
                 }
             }
-            else
-            {
-                Player player = (Player) sender;
-                sender.sendMessage("Use arguments");
-                return false;
-            }
-        }
 
         if (cmd.getName().equalsIgnoreCase("untame"))
         // If the player typed /untame then do the following...
@@ -98,7 +119,7 @@ public class TestPlugin extends JavaPlugin
                 if (sender instanceof Player) {
                     Player player = (Player) sender;
                     sender.sendMessage("Thanks for using my plugin!");
-                    sender.sendMessage("This is version " + ChatColor.GREEN + "1.1");
+                    sender.sendMessage("This is version " + ChatColor.GREEN + "2.0");
                     sender.sendMessage("for more information go to my website");
                     sender.sendMessage(ChatColor.BLUE + "http://plugins.untamemadman.pw");
                     sender.sendMessage(ChatColor.BLUE + "http://modding.untamemadman.pw");
@@ -112,7 +133,7 @@ public class TestPlugin extends JavaPlugin
                     getLogger().info("'untame' has been run from console.");
                     getLogger().info("ALL players will see the message.");
                     Bukkit.broadcastMessage("Thanks for using my plugin!");
-                    Bukkit.broadcastMessage("This is version " + ChatColor.GREEN + "1.1");
+                    Bukkit.broadcastMessage("This is version " + ChatColor.GREEN + "2.0");
                     Bukkit.broadcastMessage("for more information go to my website");
                     Bukkit.broadcastMessage(ChatColor.BLUE + "http://plugins.untamemadman.pw");
                     Bukkit.broadcastMessage(ChatColor.BLUE + "http://modding.untamemadman.pw");
@@ -127,10 +148,31 @@ public class TestPlugin extends JavaPlugin
             {
                 if (sender instanceof Player)
                 {
-                    ((Player) sender).setFireTicks(2400); //2400 = 120 seconds = 2 mins
-                    return true;
-                }
-                else
+                    if (args[1].length() == 0)
+                    {
+                        ((Player) sender).setFireTicks(2400); //2400 = 120 seconds = 2 mins
+                        return true;
+                    }
+                    else if (args[1].length() != 0)
+                    {
+                        Player target = Bukkit.getServer().getPlayer(args[1]);
+                        if (target == null)
+                        {
+                            sender.sendMessage(ChatColor.DARK_RED + args[1] + " is not currently online.");
+                            return true;
+                        }
+                        if (args[2].length() != 0)
+                        {
+                            target.setFireTicks(Integer.parseInt(args[2]));
+                            return true;
+                        }
+                        else {
+                            target.setFireTicks(2400);
+                            return true;
+                        }
+
+                    }
+                } else
                 {
                     sender.sendMessage("You must be a player");
                     return false;
